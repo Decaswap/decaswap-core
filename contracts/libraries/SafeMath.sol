@@ -1,6 +1,6 @@
 pragma solidity 0.7.0;
 
-// SPDX-License-Identifier: GPL-3.0-only
+// 
 
 // a library for performing overflow-safe math, courtesy of DappHub (https://github.com/dapphub/ds-math)
 

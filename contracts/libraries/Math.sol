@@ -1,6 +1,6 @@
 pragma solidity 0.7.0;
 
-// SPDX-License-Identifier: GPL-1.0-only
+
 
 // a library for performing various math operations
 

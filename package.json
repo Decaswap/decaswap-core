@@ -34,9 +34,10 @@
     "solc": "0.7.0",
     "truffle": "^5.1.37",
     "truffle-contract-size": "^2.0.0",
-    "verify-on-etherscan": "^1.2.1",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.3"
+    "typescript": "^3.7.3",
+    "verify-on-etherscan": "^1.2.1",
+    "truffle-plugin-verify": "^0.4.0"
   },
   "scripts": {
     "lint": "yarn prettier ./test/*.ts --check",

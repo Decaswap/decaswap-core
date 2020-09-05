@@ -6,10 +6,11 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 const infuraProjectId = process.env.INFURA_PROJECT_ID;
 
 
+
 module.exports = {
 
 
-    plugins: ["truffle-contract-size", "verify-on-etherscan"],
+    plugins: ["truffle-contract-size", "truffle-plugin-verify"],
     /**
      * Networks define how you connect to your ethereum client and let you set the
      * defaults web3 uses to send transactions. If you don't specify one truffle
@@ -19,7 +20,7 @@ module.exports = {
      *
      * $ truffle test --network <network-name>
      */
-  
+
     networks: {
       // Useful for testing. The `development` name is special - truffle uses it by default
       // if it's defined here and no other network is specified at the command line.
@@ -42,7 +43,7 @@ module.exports = {
       mainnet: {
         provider: () => new HDWalletProvider(process.env.MNEMONIC, "https://mainnet.infura.io/v3/" + infuraProjectId),
         network_id: 1,       // Mainnet id
-        gasPrice: 200000000000 // 200 gwei      
+        gasPrice: 250000000000 // 250 gwei      
       },
       
       // Another network with more advanced options...
@@ -84,5 +85,9 @@ module.exports = {
           },
         },
       },
+    },
+
+    api_keys: {
+      etherscan: process.env.ETHERSCAN_API_KEY
     }
   }
